@@ -20,7 +20,7 @@ export function AppHeader() {
         <>
           <Text>
             <>
-              User: {session?.user?.email}
+              User: {session?.user?.email} (ID: {session?.userId})
             </>
           </Text>
         </>
