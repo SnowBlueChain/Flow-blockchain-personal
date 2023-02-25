@@ -6,7 +6,7 @@ import { useAuthContext } from "../hooks/useAuthContext"
 
 export function AppHeader() {
   const { session, signOut, signIn } = useAuthContext()
-  const { onCopy } = useClipboard(session?.authToken as string)
+  const onCopy  = null //useClipboard(session?.authToken as string)
   const router = useRouter()
 
   return (
