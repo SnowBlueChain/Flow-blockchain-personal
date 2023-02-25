@@ -8,11 +8,11 @@ const handler: NextApiHandler = async (req, res) => {
   try {
     // Retrieve the match data (from fs now, should be replaced by an API in the future)
     //const data: Match[] = JSON.parse(await fs.readFile(./public/2023_LoL_esports_match_data.json, 'utf-8'));
-    const response: Response = await fetch(process.env.MATCH_DATA_PATH)
+    const response: Response = await fetch(process.env.NEXT_PUBLIC_MATCH_DATA_PATH)
     const data: Match[] = await response.json();
     //const data: Match[] = JSON.parse(await fs.readFile(process.env.MATCH_DATA_PATH, "utf-8"));
     
-    console.log(process.env.MATCH_DATA_PATH)
+    console.log(process.env.NEXT_PUBLIC_MATCH_DATA_PATH)
     console.log("response", response)
 
     //const today = new Date().toISOString().substring(0,10)
@@ -41,7 +41,7 @@ const handler: NextApiHandler = async (req, res) => {
     }, {} as GroupedMatches)
     res.status(200).json(groupedGames);
   } catch (err) {
-    console.log(process.env.MATCH_DATA_PATH)
+    console.log(process.env.NEXT_PUBLIC_MATCH_DATA_PATH)
     console.log(err)
     res.status(500).json({ message: 'Error reading data file.' });
   }
