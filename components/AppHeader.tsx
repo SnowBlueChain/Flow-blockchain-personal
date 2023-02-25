@@ -6,7 +6,6 @@ import { useAuthContext } from "../hooks/useAuthContext"
 
 export function AppHeader() {
   const { session, signOut, signIn } = useAuthContext()
-  const onCopy  = null //useClipboard(session?.authToken as string)
   const router = useRouter()
 
   return (
@@ -30,14 +29,14 @@ export function AppHeader() {
       <Text noOfLines={3} maxW="lg">
         {process.env.NEXT_PUBLIC_API_KEY}
       </Text>*/}
-      {session && (
+      {/*session && (
         <HStack>
           <Text>Authorization</Text>
           <Button colorScheme="gray" color="black" onClick={onCopy} size="sm">
             Copy Value
           </Button>
         </HStack>
-      )}
+      )*/}
 
       <HStack>
       {session && (

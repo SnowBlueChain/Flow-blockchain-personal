@@ -16,7 +16,7 @@ type AppProps<P = {}> = NextAppProps<P> & {
 const App = ({ Component, pageProps: { session, auth, ...pageProps } }: AppProps): JSX.Element => (
   <>
     <Head>
-      <title>FlowMatch - #1 eSports Betting on the Flow Blockchain!</title>
+      <title>FlowMatch - #1 eSports Betting Game on the Flow Blockchain!</title>
       <meta name="description" content="Be part of the #1 eSports Betting Game on the Flow Blockchain!" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>

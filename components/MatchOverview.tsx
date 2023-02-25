@@ -11,12 +11,9 @@ export default function MatchOverview() {
             try {
                 const response = await fetch('/api/matches')
                 const data: GroupedMatches = await response.json()
-                console.log(process.env.NEXT_PUBLIC_MATCH_DATA_PATH)
-                console.log(data)
+                //console.log(data)
                 setMatches(data)
             } catch (error) {
-                console.log(process.env.NEXT_PUBLIC_MATCH_DATA_PATH)
-                console.log(error)
                 console.error(error)
             }
         }
