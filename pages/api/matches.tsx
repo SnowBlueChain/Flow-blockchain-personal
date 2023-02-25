@@ -16,12 +16,11 @@ const handler: NextApiHandler = async (req, res) => {
     console.log("response", response)
 
     //const today = new Date().toISOString().substring(0,10)
-    const yesterday = new Date()
-    yesterday.setDate(yesterday.getDate() - 5)
-    const formattedDate = yesterday.toISOString().substring(0, 10)
+    //yesterday.setDate(today.getDate() - 1)
+    //const formattedDate = yesterday.toISOString().substring(0, 10)
 
     // only data from yesterday (as it is complete)
-    let filteredData: Match[] = data.filter(item => item.date.substring(0, 10) == formattedDate)
+    let filteredData: Match[] = data.filter(item => item.date.substring(0, 10) == "2023-02-20")
     // only complete tournament data
     filteredData = filteredData.filter(item => item.datacompleteness == "complete")
     // only NACL league until now
