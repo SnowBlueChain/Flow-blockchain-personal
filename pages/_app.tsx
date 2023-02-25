@@ -20,7 +20,7 @@ const App = ({ Component, pageProps: { session, auth, ...pageProps } }: AppProps
       <meta name="description" content="Be part of the #1 eSports Betting Game on the Flow Blockchain!" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
-  // Refetch session every hour since niftory tokens expire after 1 hour
+    {/* Refetch session every hour since niftory tokens expire after 1 hour*/}
     <SessionProvider session={session} refetchInterval={60 * 60}>
       <AuthProvider requireAuth={Component.requireAuth}>
         <ReactQueryClientProvider>
