@@ -12,7 +12,8 @@ const handler: NextApiHandler = async (req, res) => {
     const data: Match[] = await response.json();
     //const data: Match[] = JSON.parse(await fs.readFile(process.env.MATCH_DATA_PATH, "utf-8"));
     
-    
+    console.log(process.env.MATCH_DATA_PATH)
+    console.log("response", response)
 
     //const today = new Date().toISOString().substring(0,10)
     const yesterday = new Date()
