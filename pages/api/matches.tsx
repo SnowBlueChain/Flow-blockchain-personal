@@ -41,6 +41,8 @@ const handler: NextApiHandler = async (req, res) => {
     }, {} as GroupedMatches)
     res.status(200).json(groupedGames);
   } catch (err) {
+    console.log(process.env.MATCH_DATA_PATH)
+    console.log(err)
     res.status(500).json({ message: 'Error reading data file.' });
   }
 }
